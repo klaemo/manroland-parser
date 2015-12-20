@@ -1,0 +1,39 @@
+{
+  "name": "manroland-parser",
+  "author": "Clemens Stolle <klaemo@fastmail.fm>",
+  "version": "1.0.0",
+  "description": "Parses and normalizes manroland csv data",
+  "main": "index.js",
+  "bin": {
+    "manroland-parser": "cli.js"
+  },
+  "dependencies": {
+    "csv-streamify": "^3.0.3",
+    "debug": "^2.2.0",
+    "deep-freeze-strict": "^1.1.1",
+    "iconv-lite": "^0.4.13",
+    "is-number": "^2.1.0",
+    "lodash.memoize": "^3.0.4",
+    "pump": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "snazzy": "^2.0.1",
+    "standard": "^5.4.1"
+  },
+  "scripts": {
+    "pretest": "npm prune && standard -v | snazzy",
+    "test": "mocha -R spec",
+    "test:debug": "DEBUG=manroland-parser npm run -s test",
+    "watch": "npm test -- -w -R dot"
+  },
+  "keywords": [
+    "manroland",
+    "parser"
+  ],
+  "repository": "https://github.com/klaemo/manroland-parser",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  }
+}

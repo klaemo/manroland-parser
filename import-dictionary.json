@@ -1,0 +1,213 @@
+{
+	"meta": {
+		"jobNo": {
+			"manroland": "Job Number:"
+		},
+		"jobDescr": {
+			"manroland": "Job Description:"
+		},
+		"sheet": {
+			"manroland": "Sheet:"
+		},
+		"workstep": {
+			"manroland": "Workstep:"
+		},
+		"side": {
+			"manroland": "Side:"
+		},
+		"paperType": {
+			"manroland": "Paper Type:"
+		},
+		"grammage": {
+			"manroland": "Paper Weight:"
+		},
+		"paperName": {
+			"manroland": "Paper Name:"
+		},
+		"paperID": {
+			"manroland": "Paper ID:"
+		},
+		"printRuns": {
+			"manroland": "Amount:"
+		},
+		"printer": {
+			"manroland": "Printer:"
+		},
+		"curve": {
+			"manroland": "Calibration Curve:"
+		},
+		"customerID": {
+			"manroland": "Customer ID:"
+		},
+		"customer": {
+			"manroland": "Customer:"
+		},
+		"ink": {
+			"manroland": "Ink:"
+		},
+		"screening": {
+			"manroland": "Screening:"
+		},
+		"sheets_good": {
+			"manroland": "Good:"
+		},
+		"sheets_waste": {
+			"manroland": "Waste:"
+		},
+		"setup_time": {
+			"manroland": "Setuptime:"
+		},
+		"print_run_time": {
+			"manroland": "Printruntime:"
+		},
+		"cleanup_time": {
+			"manroland": "Cleanuptime:"
+		}
+	},
+	"data": {
+		"measuringNo": {
+			"manroland": "Protocolled Measuring No"
+		},
+		"pUnitNo": {
+			"manroland": "Printing Unit No"
+		},
+		"stripNo": {
+			"manroland": "Strip No"
+		},
+		"filter": {
+			"manroland": "Filter"
+		},
+		"color": {
+			"manroland": "Color Name (Symbol)"
+		},
+		"zoneNo": {
+			"manroland": "Zone No"
+		},
+		"nomDens": {
+			"manroland": "Nominal Density Control Field"
+		},
+		"actDens": {
+			"manroland": "Actual Density Control Field"
+		},
+		"nom_L": {
+			"manroland": "Nominal L-Value Solid Tone"
+		},
+		"nom_a": {
+			"manroland": "Nominal a-Value Solid Tone"
+		},
+		"nom_b": {
+			"manroland": "Nominal b-Value Solid Tone"
+		},
+		"act_L": {
+			"manroland": "Actual L-Value Solid Tone"
+		},
+		"act_a": {
+			"manroland": "Actual a-Value Solid Tone"
+		},
+		"act_b": {
+			"manroland": "Actual b-Value Solid Tone"
+		},
+		"densSolid": {
+			"manroland": "Density Solid Tone"
+		},
+		"densDeep": {
+			"manroland": "Density Deep Tone"
+		},
+		"densMid": {
+			"manroland": "Density Mid Tone"
+		},
+		"densHigh": {
+			"manroland": "Density High Tone"
+		},
+		"tonVal80": {
+			"manroland": "Tonal Value Deep Tone"
+		},
+		"tonVal50": {
+			"manroland": "Tonal Value Mid Tone"
+		},
+		"tonVal20": {
+			"manroland": "Tonal Value High Tone"
+		},
+		"zoneState": {
+			"manroland": "Zone State"
+		},
+		"tonVal40": {
+			"manroland": "Tonal Value 4 Tone"
+		},
+		"colorName": {
+			"manroland": "Color Name"
+		},
+		"act_L_20": {
+			"manroland": "L-Value High Tone"
+		},
+		"act_L_40": {
+			"manroland": "L-Value 4 Tone"
+		},
+		"act_L_50": {
+			"manroland": "L-Value Mid Tone"
+		},
+		"act_L_80": {
+			"manroland": "L-Value Deep Tone"
+		},
+		"act_a_20": {
+			"manroland": "a-Value High Tone"
+		},
+		"act_a_40": {
+			"manroland": "a-Value 4 Tone"
+		},
+		"act_a_50": {
+			"manroland": "a-Value Mid Tone"
+		},
+		"act_a_80": {
+			"manroland": "a-Value Deep Tone"
+		},
+		"act_b_20": {
+			"manroland": "b-Value High Tone"
+		},
+		"act_b_40": {
+			"manroland": "b-Value 4 Tone"
+		},
+		"act_b_50": {
+			"manroland": "b-Value Mid Tone"
+		},
+		"act_b_80": {
+			"manroland": "b-Value Deep Tone"
+		}
+	},
+
+	"secondary": {
+		"CM": {
+			"act_L": {
+				"manroland": "L-Value T(C+M) - Solid Tone"
+			},
+			"act_a": {
+				"manroland": "a-Value T(C+M) - Solid Tone"
+			},
+			"act_b": {
+				"manroland": "b-Value T(C+M) - Solid Tone"
+			}
+		},
+		"MY": {
+			"act_L": {
+				"manroland": "L-Value T(M+Y) - Solid Tone"
+			},
+			"act_a": {
+				"manroland": "a-Value T(M+Y) - Solid Tone"
+			},
+			"act_b": {
+				"manroland": "b-Value T(M+Y) - Solid Tone"
+			}
+		},
+		"CY": {
+			"act_L": {
+				"manroland": "L-Value T(C+Y) - Solid Tone"
+			},
+			"act_a": {
+				"manroland": "a-Value T(C+Y) - Solid Tone"
+			},
+			"act_b": {
+				"manroland": "b-Value T(C+Y) - Solid Tone"
+			}
+		}
+	}
+}

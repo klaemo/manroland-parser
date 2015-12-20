@@ -20,7 +20,7 @@ module.exports = parser
 
 // export all of our functions, mainly for unit tests
 Object.assign(module.exports, {
-  normalizeMeta, normalizeDataRow, normalizeSecondaryColorRow,
+  normalizeMeta, normalizeDataRow, normalizeSecondaryColorRow, correctOldTonval,
   getMachineName, skip, isHeaderRow, isSecondaryColorRow, mapToHeaders
 })
 
@@ -73,6 +73,21 @@ function normalizeDataRow (row, dict) {
     }
     return obj
   }, Object.create(null))
+}
+
+/**
+ * Corrects old strips where the mid tone field == 40%
+ * @param  {object} row Row
+ * @return {object}     Corrected row
+ */
+function correctOldTonval (row) {
+  if (row.tonVal40 !== undefined) return row
+
+  const newRow = Object.assign({}, row, { tonVal40: row.tonVal50 })
+  delete newRow.tonVal50
+  delete newRow.tonVal20
+  if (newRow.tonVal40) log('old tonval row corrected')
+  return newRow
 }
 
 function tryNumber (value) {
@@ -199,7 +214,7 @@ function parser (file, cb) {
 
     if (isData) {
       const mapped = mapToHeaders(row, headers)
-      const normalized = normalizeDataRow(mapped, DICTIONARY.data)
+      const normalized = correctOldTonval(normalizeDataRow(mapped, DICTIONARY.data))
       if (isSecondaryColorRow(row)) {
         normalizeSecondaryColorRow(mapped, DICTIONARY.secondary).forEach((secondaryColorRow) => {
           values.push(enhanceSecondaryColorRow(secondaryColorRow, normalized))

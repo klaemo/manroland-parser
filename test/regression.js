@@ -113,7 +113,7 @@ describe('manroland-parser regression tests', function () {
     })
   })
 
-  it.skip('should handle old files', function (done) {
+  it('should handle old files', function (done) {
     const file = createReadStream(`${__dirname}/fixtures/R710DD_12-08-21_22404_1.1 AGCO 4_4_4_4 1 AGCO 4_4_top.csv`)
 
     importer(file, function (err, result) {
@@ -124,7 +124,9 @@ describe('manroland-parser regression tests', function () {
       assert(Array.isArray(result.values))
       assert(result.values.length)
 
-      result.values.filter(isPrimaryColor).forEach((row) => {
+      const filtered = result.values.filter(isPrimaryColor).filter((row) => row.tonVal40)
+      assert.strictEqual(filtered.length, 110)
+      filtered.forEach((row) => {
         assert(!row.tonVal20)
         assert(row.tonVal40)
         assert(!row.tonVal50)

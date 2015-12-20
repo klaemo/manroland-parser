@@ -9,6 +9,7 @@ const dictionary = require('../import-dictionary.json')
 const getMachineName = importer.getMachineName
 const normalizeMeta = importer.normalizeMeta
 const normalizeDataRow = importer.normalizeDataRow
+const correctOldTonval = importer.correctOldTonval
 const normalizeSecondaryColorRow = importer.normalizeSecondaryColorRow
 const mapToHeaders = importer.mapToHeaders
 const skip = importer.skip
@@ -92,6 +93,20 @@ describe('manroland-parser', function () {
       assert.deepEqual(mapToHeaders(row, headers), { foo: 1, bar: 2 })
       assert.deepEqual(row, [1, 2], 'row should be unchanged')
       assert.deepEqual(headers, ['foo', 'bar'], 'headers should be unchanged')
+    })
+  })
+
+  describe('correctOldTonval()', function () {
+    it('should recognize and correct old tonval strips', function () {
+      const input = { tonVal20: null, tonVal50: 1, tonVal80: 2 }
+      const res = correctOldTonval(input)
+      assert.notEqual(input, res, 'should be immutable')
+      assert.strictEqual(res.tonVal20, undefined)
+      assert.strictEqual(res.tonVal40, 1)
+      assert.strictEqual(res.tonVal50, undefined)
+      assert.strictEqual(res.tonVal80, 2)
+      const noop = { tonVal40: null }
+      assert.strictEqual(noop, correctOldTonval(noop))
     })
   })
 

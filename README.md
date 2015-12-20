@@ -1,4 +1,4 @@
-# manroland-parser
+# manroland-parser [![Build Status](https://travis-ci.org/klaemo/manroland-parser.png)](https://travis-ci.org/klaemo/manroland-parser)
 
 Parses and normalizes manroland csv data
 
